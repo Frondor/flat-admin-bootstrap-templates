@@ -5,6 +5,11 @@ import source from 'vinyl-source-stream';
 import watchify from 'watchify';
 import gutil from 'gulp-util';
 
+const SOURCE = [
+    'src/app.js',
+    'src/js/form.js',
+    'src/js/dashboard.js'
+];
 function build( file, watch, dest ) {
     var props = {
         entries: [ file ],
@@ -43,10 +48,10 @@ function build( file, watch, dest ) {
     return rebundle();
 }
 
-/*gulp.task( "js:watch", function () {
-    return build( './src/app.js', true, './temp/html/assets/js/' );
-} );*/
+gulp.task( "js:watch", function () {
+    return build( './src/app.js', true, './dist/assets/js/' );
+} );
 
-gulp.task( "build:js", function () {
-    return build( './src/app.js', true, './dist/html/assets/js/' );
+gulp.task( "js", function () {
+    return build( './src/app.js', false, './dist/assets/js/' );
 } );

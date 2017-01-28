@@ -1,6 +1,6 @@
 'use strict';
 
-import gulp from 'gulp';
+var gulp = require('gulp');
 
 // gulp.task( "assets", [ "assets:flags" ] );
 
@@ -11,10 +11,10 @@ import gulp from 'gulp';
 // } );
 
 
-gulp.task( "build:assets", [ "build:assets:flags" ] );
+gulp.task( "assets", [ "assets:flags" ] );
 
-gulp.task( 'build:assets:flags', function () {
+gulp.task( 'assets:flags', function () {
     return gulp.src( './node_modules/flag-icon-css/flags/**/*' )
-        .pipe( gulp.dest( 'dist/html/assets/css/flags' ) );
+        .pipe( gulp.dest( 'dist/assets/css/flags' ) );
     // .pipe(gulp.dest('dist/angularjs/assets/css/flags'))
 } );

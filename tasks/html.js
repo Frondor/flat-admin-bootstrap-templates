@@ -15,7 +15,7 @@ var htmlhint = require( "gulp-htmlhint" );
 //         .pipe( gulp.dest( 'temp/html/' ) );
 // } );
 
-gulp.task( 'build:html', () => {
+gulp.task( 'html', () => {
     return gulp.src( [ 'src/html/**/*.html', '!src/html/include/*.html' ] )
         .pipe( fileinclude( {
             prefix: '@@',
@@ -23,5 +23,5 @@ gulp.task( 'build:html', () => {
         } ) )
         .pipe( htmlhint() )
         .pipe( htmlhint.reporter() )
-        .pipe( gulp.dest( 'dist/html/' ) );
+        .pipe( gulp.dest( 'dist/' ) );
 } );

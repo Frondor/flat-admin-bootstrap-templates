@@ -10,9 +10,9 @@ var stripCssComments = require( 'gulp-strip-css-comments');
 var sourcemaps = require( 'gulp-sourcemaps' );
 var cssmin = require( 'gulp-cssmin' );
 
-gulp.task( "build:sass", [ "build:sass:main", "build:sass:theme" ] );
+gulp.task( "sass", [ "sass:main", "sass:theme" ] );
 
-gulp.task( "build:sass:main", () => {
+gulp.task( "sass:main", () => {
     return gulp.src( "./src/app.sass" )
         .pipe( sourcemaps.init( { loadMaps: true }) )        
         .pipe( sass( { outputStyle: 'compressed' }) )
@@ -24,11 +24,11 @@ gulp.task( "build:sass:main", () => {
         .pipe( concat( 'flat-admin.css' ) )
         .pipe( stripCssComments() )
         .pipe( sourcemaps.write( "." ) )
-        .pipe( gulp.dest( './dist/html/assets/css/' ) )
+        .pipe( gulp.dest( './dist/assets/css/' ) )
 } );
 
 
-gulp.task( "build:sass:theme", () => {
+gulp.task( "sass:theme", () => {
     return gulp.src( [ "./src/style/theme/*.sass", "!./src/style/theme/mixin.sass" ] )
         .pipe( sourcemaps.init() )        
         .pipe( sass({ outputStyle: 'compressed' }) )
@@ -39,7 +39,7 @@ gulp.task( "build:sass:theme", () => {
         ] ) )
         .pipe( stripCssComments() )
         .pipe( sourcemaps.write( "." ) )
-        .pipe( gulp.dest( './dist/html/assets/css/theme' ) )
+        .pipe( gulp.dest( './dist/assets/css/theme' ) )
 } );
 /*gulp.task( "sass", [ "sass:main", "sass:theme" ] );
 

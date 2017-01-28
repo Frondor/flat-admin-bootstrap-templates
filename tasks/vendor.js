@@ -1,7 +1,7 @@
 'use strict';
 
-import gulp from "gulp";
-import concat from "gulp-concat";
+var gulp = require( "gulp" );
+var concat = require( "gulp-concat" );
 var uglify = require( 'gulp-uglify' );
 // var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require( 'gulp-sourcemaps' );
@@ -30,25 +30,25 @@ const cssLibs = [
     'bower_components/select2/dist/css/select2.css',
     'bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css'
 ]
-gulp.task( 'build:vendor', [ 'build:vendor:js', 'build:vendor:css' ] );
+gulp.task( 'vendor', [ 'vendor:js', 'vendor:css' ] );
 // gulp.task('build:vendor', ['build:vendor:js', 'build:vendor:css', 'build:vendor:angularjs', 'build:vendor:angularjs:css']);
 
-gulp.task( 'build:vendor:js', function () {
+gulp.task( 'vendor:js', function () {
     return gulp.src( jsLibs )
         .pipe( sourcemaps.init() )
         .pipe( concat( 'vendor.js' ) )
         .pipe( uglify() )
         .pipe( sourcemaps.write( "." ) )
-        .pipe( gulp.dest( 'dist/html/assets/js' ) );
+        .pipe( gulp.dest( 'dist/assets/js' ) );
 } );
 
-gulp.task( 'build:vendor:css', function () {
+gulp.task( 'vendor:css', function () {
     return gulp.src( cssLibs )
         .pipe( sourcemaps.init() )
         .pipe( concat( 'vendor.css' ) )
         // .pipe( cssmin() )
         .pipe( sourcemaps.write( "." ) )
-        .pipe( gulp.dest( 'dist/html/assets/css' ) );
+        .pipe( gulp.dest( 'dist/assets/css' ) );
 } );
 /*
 gulp.task( 'vendor', [ 'vendor:js', 'vendor:css' ] );

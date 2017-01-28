@@ -1,9 +1,9 @@
-import gulp from 'gulp';
-import runSequence from 'run-sequence';
+var gulp = require('gulp');
+var runSequence = require('run-sequence');
 
 gulp.task( "watch", () => {
-  gulp.watch( [ "./src/**/*.sass" ], [ "sass", "refresh" ] );
-  gulp.watch( [ "./src/**/*.html", '!./src/angularjs/**/*.html' ], [ "html", "refresh" ] );
+  gulp.watch( [ "./src/**/*.sass" ], [ "sass", "browser-sync-stream" ] );
+  gulp.watch( [ "./src/**/*.html" ], [ "html", "refresh" ] );    
 });
 
 // gulp.task("angularjs:watch", () => {

@@ -1,0 +1,30 @@
+extends _master_with_include.pug
+
+block append vars
+  - var title = 'dashboard'  
+
+block header
+    script(src=`asset/js/dashboard.js`)
+
+block content    
+    .row
+        .col-xs-12
+            .card.card-banner.card-chart.card-green.no-br
+                .card-header
+                    .card-title
+                        .title Top Sale Today
+                    ul.card-action
+                        li
+                            a(href='/')
+                                i.fa.fa-refresh
+                .card-body
+                    .ct-chart-sale
+    .row
+        .col-xs-12
+            .card
+                .card-header Line Chart
+                .card-body
+                    //- .section
+                    //-     .section-title Line Chart
+                    //-     .section-body
+                    .ct-chart.ct-perfect-fourth.ct-chart-line

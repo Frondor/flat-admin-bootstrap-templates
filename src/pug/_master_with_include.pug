@@ -1,0 +1,21 @@
+block vars
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        title #{title}
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+        link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto")
+        link(rel="stylesheet" href="assets/css/vendor.css")
+        link(rel="stylesheet" href="assets/css/flat-admin.css")
+        link(rel="stylesheet" href="//unpkg.com/flatpickr/dist/flatpickr.min.css")
+        script(src="assets/js/vendor.js")
+        script(src="//unpkg.com/flatpickr")
+        script(src="//npmcdn.com/flatpickr/dist/l10n/zh.js")
+        block header
+    body
+        .app.app-default
+            include include/_navi.pug
+            .app-container
+                include include/_head_nav_bar.pug
+                block content
