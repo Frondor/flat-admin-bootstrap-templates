@@ -43,19 +43,10 @@ function build( file, watch, dest ) {
     return rebundle();
 }
 
-gulp.task( "js:watch", function () {
+/*gulp.task( "js:watch", function () {
     return build( './src/app.js', true, './temp/html/assets/js/' );
-} );
-
-/*gulp.task("angularjs:js:watch", function() {
-  return build('./src/angularjs/js/app.js', true, './temp/angularjs/js/');
-});
-*/
+} );*/
 
 gulp.task( "build:js", function () {
-    return build( './src/app.js', false, './dist/html/assets/js/' );
+    return build( './src/app.js', true, './dist/html/assets/js/' );
 } );
-/*
-gulp.task("build:angularjs:js", function() {
-  return build('./src/angularjs/js/app.js', false, './dist/angularjs/js/');
-});*/
