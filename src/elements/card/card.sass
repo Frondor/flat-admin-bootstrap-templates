@@ -1,5 +1,6 @@
 @import 'card.mixin'
 
+
 .card
   width: 100%
   background-color: $white
@@ -7,7 +8,7 @@
   box-shadow: 0 1px 2px $grey-darker
 
   .card-header
-    padding: 30px
+    padding: 1.25rem;
     font-size: 1.1em
     font-weight: 400
     border-bottom: 1px solid $grey
@@ -18,6 +19,7 @@
 
     .card-title
       flex: 1
+      margin: 0
     .card-action
       list-style: none
       margin: 0
@@ -31,7 +33,8 @@
           border-radius: 2px
 
   .card-body
-    padding: 30px
+    // padding: 30px
+    padding: 1.25rem;
   
   &.card-mini
     .card-header
@@ -175,8 +178,7 @@
           font-size: 1em
           font-weight: 400
           color: $grey-darkest
-          text-transform: uppercase
-    
+          text-transform: uppercase    
       &::after
         content: ''
         position: relative
@@ -239,3 +241,5 @@
             padding-top: 1rem
           .title 
             font-size: 0.9em
+
+@import './bootstrap4_card'

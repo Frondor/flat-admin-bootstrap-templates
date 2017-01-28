@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/tui2tone/flat-admin-bootstrap-templates/issues"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-cli": "^6.10.1",
@@ -27,8 +27,9 @@
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-clean": "^0.3.2",
-    "gulp-clean-css": "^2.0.13",
+    "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
     "gulp-file-include": "^1.0.0",
     "gulp-htmlhint": "^0.3.1",
     "gulp-imagemin": "^3.0.2",
@@ -36,7 +37,10 @@
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.4.0",
     "gulp-strip-css-comments": "^1.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.7",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",

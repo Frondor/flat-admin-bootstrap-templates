@@ -3,4 +3,5 @@
 /bin
 /public
 /temp
+/dist
 npm-debug.log
